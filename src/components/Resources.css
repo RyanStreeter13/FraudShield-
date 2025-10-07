@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.top-nav .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.top-nav .nav-links li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.top-nav .nav-links li:hover {
+  color: #1a73e8;
+}
+
+/* Resource Hub */
+.resource-hub {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.hub-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.hub-btn:hover {
+  background-color: #155ab6;
+  transform: translateY(-2px);
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  position: relative;
+  margin: 0 auto 3rem auto;
+  max-width: 1200px;
+}
+
+.hero-carousel .slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-carousel .slide-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.hero-carousel .slide-overlay h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Resource Cards */
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 3rem 3rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-type {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* Ensure main content sits right below navbar */
+.resources-main {
+  margin:0;
+  margin-top: 0;       /* removes any gap above main content */
+  padding: 0;          /* optional: remove internal padding */
+}
+
+/* Remove extra top margin from hero carousel */
+.hero-carousel {
+  margin-top: 0;       /* ensures carousel starts immediately below navbar */
+  margin-bottom: 3rem; /* keep bottom spacing if desired */
+}
+
+/* Optional: adjust padding in content container */
+.resources-content {
+  padding-top: 0;      /* removes any extra space above sidebar/cards */
+}
+
+.page-title, .cards-header {
+  text-align: left;   /* center text horizontally */
+  margin-bottom: 1.5rem ;       /* vertical spacing */
+}
