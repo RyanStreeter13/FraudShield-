@@ -1,42 +1,46 @@
-// src/components/Navbar.jsx
 import React from "react";
 import "../index.css";
-import threeImg from "../logos/three.jpg";
-import twoImg from "../logos/two.png";
-
+import twoImg from "../logos/two.png"; // Main logo
 
 const Navbar = ({ setPage, setShowLogin, user, handleLogout }) => {
   return (
     <div className="navbar">
-      <div className="container navbar-content">
+      <div className="navbar-content">
+        {/* Left side: Logo + Search */}
         <div className="nav-left">
-          <input type="text" placeholder="Search..." className="search-box" />
+          <img
+            src={twoImg}
+            alt="Logo"
+            className="navbar-logo"
+            onClick={() => setPage("home")}
+          />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="search-box"
+          />
         </div>
 
-        <div className="nav-left">
-          <a href="#" onClick={() => setPage("home")}>
-            <img src={twoImg} alt="Logo" className="navbar-logo" />   {/*/this line to change navbar logo */}
-          </a>
-        </div>
-
+        {/* Right side: Home, Resources, Learn, Login/Logout */}
         <div className="nav-right">
-            <button className="Learn" onClick={() => setPage("resources")}>
+          <button className="nav-btn" onClick={() => setPage("home")}>
+            Home
+          </button>
+          <button className="nav-btn" onClick={() => setPage("resources")}>
             Resources
           </button>
-          <button className="Learn" onClick={() => setPage("education")}>
+          <button className="nav-btn" onClick={() => setPage("education")}>
             Learn
           </button>
-          
-          <button className="Scanners" onClick={() => setPage("scanners")}>
-            Scanners
-          </button>
-
           {!user ? (
-            <button className="sign-up" onClick={() => setShowLogin(true)}>
+            <button
+              className="nav-btn login-btn"
+              onClick={() => setShowLogin(true)}
+            >
               Login
             </button>
           ) : (
-            <button className="sign-up" onClick={handleLogout}>
+            <button className="nav-btn login-btn" onClick={handleLogout}>
               Logout
             </button>
           )}

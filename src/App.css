@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Global Reset & Fonts */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f8fa; /* light background for all pages */
+  color: #1f2937; /* dark text color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Headings */
+h1, h2, h3 {
+  color: #0f172a; /* dark navy */
+  margin-bottom: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Buttons (CTAs) */
+button.cta {
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+button.cta.learner { background-color: #3b82f6; color: white; }
+button.cta.teacher { background-color: #10b981; color: white; }
+button.cta.parent  { background-color: #f59e0b; color: white; }
+
+button.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+.feature-card, .course-card, .module-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 0.5rem 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.feature-card:hover, .course-card:hover, .module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Hero Section */
+.hero {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 3rem 0;
+  background-color: #e0f2fe; /* light blue */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.hero-left { flex: 1; }
+.hero-right { flex: 1; display: flex; justify-content: center; }
+
+.hero-image {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Activity List / Modules List */
+.activity-list, .module-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-list li, .module-list li {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #0f172a; /* dark navy sidebar */
   color: white;
+  padding: 1rem;
+  width: 220px;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar h2 { font-size: 1.5rem; }
+.sidebar ul { list-style-type: none; padding: 0; }
+.sidebar li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  color: #3b82f6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  padding: 2rem;
+}
+
+/* Links */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
