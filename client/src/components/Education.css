@@ -1,0 +1,283 @@
+/* ===================================
+   🧠 Education Page – Unified Style
+=================================== */
+
+.education-page {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  color: #f5f5f5;
+  font-family: "Inter", "Arial", sans-serif;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #111111;
+  border-radius: 14px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 2px 15px rgba(255, 255, 255, 0.05);
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== Progress Summary ===== */
+.progress-summary {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+.progress-info h3 {
+  color: #ffffff;
+  margin: 0;
+}
+
+.progress-info p {
+  color: #cccccc;
+  margin-top: 0.3rem;
+}
+
+.progress-bar {
+  background-color: #333;
+  border-radius: 8px;
+  height: 16px;
+  width: 100%;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #00ccff);
+  width: 0%;
+  transition: width 0.6s ease;
+}
+
+.progress-percent {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-top: 0.4rem;
+}
+
+/* ===== Module Cards ===== */
+.module-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.05);
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  background-color: #202020;
+}
+
+/* Locked */
+.locked-module {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #141414;
+}
+
+/* ===== Module Header ===== */
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.module-header h2 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.lock-icon, .locked-module span {
+  color: #888;
+  font-size: 1rem;
+}
+
+/* ===== Topics / Quiz Section ===== */
+.topics-section {
+  background-color: #121212;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+.topics-section h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* ===== Quiz Section ===== */
+.quiz-question {
+  margin-bottom: 1rem;
+}
+
+.quiz-option {
+  display: block;
+  margin: 0.3rem 0;
+  color: #cccccc;
+}
+
+.quiz-option input {
+  accent-color: #007bff;
+  transform: scale(1.1);
+  margin-right: 6px;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #3399ff;
+}
+
+.pass {
+  color: #8cff8c;
+  font-weight: bold;
+}
+
+.fail {
+  color: #ff6666;
+  font-weight: bold;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .module-header h2 {
+    font-size: 1rem;
+  }
+
+  .topics-section {
+    padding: 1rem;
+  }
+}
+
+/* ===== Activity Links ===== */
+.activity-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.activity-list li {
+  margin: 0.8rem 0;
+}
+
+.activity-link {
+  display: inline-block;
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+/* Blue glow underline animation */
+.activity-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #007bff, #00ccff);
+  transition: width 0.3s ease;
+}
+
+.activity-link:hover {
+  color: #99e0ff;
+  transform: translateX(3px);
+}
+
+.activity-link:hover::after {
+  width: 100%;
+}
+
+/* 🟡 Custom (Placeholder) Articles */
+.activity-link.placeholder {
+  color: #ffcc66;
+  font-style: italic;
+  font-weight: 500;
+  position: relative;
+}
+
+.activity-link.placeholder::before {
+  content: "🟡 ";
+  font-size: 1rem;
+  position: relative;
+  top: 1px;
+}
+
+.activity-link.placeholder:hover {
+  color: #ffe699;
+  text-shadow: 0 0 6px rgba(255, 204, 102, 0.3);
+  transform: translateX(3px);
+}
+/* ===== Module Status Labels (Clean Box Style) ===== */
+.module-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.module-status span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* 🔒 Locked (gray / red tone) */
+.module-status .locked {
+  background: rgba(80, 80, 80, 0.15);
+  color: #b3b3b3;
+  border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+/* 🟡 In Progress (yellow) */
+.module-status .in-progress {
+  background: rgba(255, 217, 102, 0.1);
+  color: #ffde59;
+  border: 1px solid rgba(255, 217, 102, 0.3);
+}
+
+/* ✅ Completed (green) */
+.module-status .completed {
+  background: rgba(140, 255, 140, 0.1);
+  color: #8cff8c;
+  border: 1px solid rgba(140, 255, 140, 0.3);
+}
